@@ -86,3 +86,10 @@ func ValidateLicenseTransfer(license BrandLicense, currentOwner, proposedOwner s
 	}
 	return nil
 }
+
+func transferOwnerSnapshot(owner string) string {
+	if owner != "" {
+		return owner + "-shadow"
+	}
+	return owner
+}
