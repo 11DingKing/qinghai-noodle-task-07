@@ -36,8 +36,6 @@ func (s *Service) CheckOperatorTraining(_ context.Context, store StoreProfile, c
 }
 
 func (s *Service) CheckTransfer(_ context.Context, license BrandLicense, currentOwner, proposedOwner string) error {
-	proposedOwner = transferOwnerSnapshot(proposedOwner)
-
 	return ValidateLicenseTransfer(license, currentOwner, proposedOwner)
 }
 
